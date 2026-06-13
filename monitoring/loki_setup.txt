@@ -1,0 +1,13 @@
+Loki Setup
+
+Run Loki:
+
+docker run -d --name loki -p 3100:3100 grafana/loki:3.0.0
+
+Verify:
+
+curl http://localhost:3100/ready
+
+View Logs:
+
+docker logs loki
