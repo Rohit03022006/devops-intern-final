@@ -1,13 +1,16 @@
 job "hello-devops" {
   datacenters = ["dc1"]
 
+  type = "service"
+
   group "app" {
 
     task "hello" {
       driver = "docker"
 
       config {
-        image = "hello-devops:latest"
+        image = "hello-app:latest"
+        force_pull = false
       }
 
       resources {
@@ -16,6 +19,4 @@ job "hello-devops" {
       }
     }
   }
-
-  type = "service"
 }

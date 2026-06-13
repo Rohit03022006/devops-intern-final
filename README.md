@@ -125,6 +125,54 @@ The following tools are required:
 
 ---
 
+---
+
+## Verification Commands
+
+### Run Application
+
+```bash
+python3 hello.py
+```
+
+### Execute Linux Script
+
+```bash
+chmod +x scripts/sysinfo.sh
+./scripts/sysinfo.sh
+```
+
+### Build Docker Image
+
+```bash
+docker build -t hello-app .
+```
+
+### Run Docker Container
+
+```bash
+docker run hello-app
+```
+
+### Check Nomad Job Status
+
+```bash
+nomad status
+```
+
+### Verify Loki
+
+```bash
+curl localhost:3100/ready
+```
+
+Expected Output:
+
+```text
+ready
+```
+---
 ## Conclusion
 
 This project successfully demonstrates a complete beginner DevOps workflow covering source control, Linux administration, containerization, CI/CD automation, workload deployment, and monitoring.
+
