@@ -12,10 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Python Setup
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
 
-      - name: Run Script
+      - name: Verify Files
+        run: ls -la
+
+      - name: Run Application
         run: python hello.py
