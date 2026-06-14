@@ -28,14 +28,7 @@ echo ""
 echo "Memory Usage:"
 free -h
 
-echo ""
+echo "Current User: $(whoami)"
+echo "Current Date: $(date)"
 echo "Disk Usage:"
 df -h
-
-echo ""
-echo "IP Address:"
-hostname -I
-
-echo ""
-echo "Logged In Users:"
-who
